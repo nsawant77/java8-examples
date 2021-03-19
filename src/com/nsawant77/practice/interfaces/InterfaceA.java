@@ -12,9 +12,9 @@ public interface InterfaceA {
 
     //public abstract by default
     //cannot be private, protected, strictfp, synchronized, native
-    void getData();
+    //void getData();
 
-    public abstract String getValue();
+    String getValue(int a);
 
     //cannot have a static block
     //cannot have a constructor
