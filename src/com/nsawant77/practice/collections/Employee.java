@@ -2,9 +2,9 @@ package com.nsawant77.practice.collections;
 
 public class Employee {
 
-    String name;
-    Integer salary;
-    String dept;
+    private final String name;
+    private final Integer salary;
+    private final  String dept;
 
     public Employee(String name, Integer salary, String dept) {
         this.name = name;
@@ -13,6 +13,18 @@ public class Employee {
     }
 
     public String toString(){
-        return name+":"+dept+":"+salary;
+        return getName() +":"+ getDept() +":"+ getSalary();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public String getDept() {
+        return dept;
     }
 }
