@@ -13,7 +13,6 @@ public class ExtractEvenNos {
         a1.add(33);
         a1.add(7);
         a1.add(16);
-        //a1.add(16);
         System.out.println("Before: "+a1);
 
         List<Integer> even = a1.stream()
