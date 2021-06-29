@@ -9,7 +9,7 @@ public class ConvertListToMap {
 
     public static void main(String[] args) {
         ArrayList<String> al = new ArrayList<>();
-        al.add("a:b");
+        al.add("a:b");  
         al.add("c:d");
         al.add("e:f");
         al.add("g:h");
@@ -22,7 +22,7 @@ public class ConvertListToMap {
         System.out.println("Converted to Map: "+m1);
         System.out.println("Print only:");
         al.stream()
-                .sorted(C)
+                .sorted()
         .map(item->item.split(":"))
         .forEach(item -> System.out.println(item[0]+ " "+item[1]));
     }
