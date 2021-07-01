@@ -40,11 +40,6 @@ public class Ascending {
         System.out.println("First Element: "+nums[0]);
         System.out.println("Last Element: "+nums[a.size()-1]);
 
-
         bufferedReader.close();
-    }
-
-    public static void swap(int a, int b){
-
     }
 }
