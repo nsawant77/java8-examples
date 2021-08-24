@@ -15,7 +15,7 @@ public class Ascending {
     public static void main(String[] args) throws IOException {
 
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(bufferedReader.readLine().trim());
+        //int n = Integer.parseInt(bufferedReader.readLine().trim());
         List<Integer> a = Stream.of(bufferedReader.readLine().split(" "))
                 .map(Integer::parseInt)
                 .collect(Collectors.toList());
