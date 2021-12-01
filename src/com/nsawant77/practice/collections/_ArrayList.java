@@ -49,16 +49,23 @@ public class _ArrayList {
         listOfEmp.add(e3);
         listOfEmp.add(e4);
         listOfEmp.add(e5);
+        System.out.println("Before:");
         System.out.println(listOfEmp);
-        //Collections.sort(listOfEmp,(o1,o2)-> o1.dept.compareTo(o2.dept));
-        Collections.sort(listOfEmp, new Comparator<Employee>() {
+
+        System.out.println("After:");
+
+
+        Collections.sort(listOfEmp,(o1,o2)-> o1.getSalary().compareTo(o2.getSalary()));
+        /*Collections.sort(listOfEmp, new Comparator<Employee>() {
             @Override
             public int compare(Employee o1, Employee o2) {
                 return 0;
             }
-        });
-
-        System.out.println(listOfEmp);
+        });*/
+        //System.out.println(listOfEmp);
+        listOfEmp.stream().sorted(Comparator.comparing(Employee::getName))
+                .collect(Collectors.toList())
+                .forEach(el -> System.out.print(el+", "));
 
         /*listOfEmp.stream()
                 .sorted().collect(Collectors.toList())

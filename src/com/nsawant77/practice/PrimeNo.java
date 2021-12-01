@@ -14,17 +14,11 @@ public class PrimeNo {
     public static void main(String[] args) throws IOException {
 
         Scanner scan = new Scanner(System.in);
-        /*BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        //int count = Integer.parseInt(bufferedReader.readLine().trim());
-        List<Integer> list = Stream.of(bufferedReader.readLine().split(" "))
-                .map(Integer::parseInt)
-                .collect(Collectors.toList());*/
         int no = scan.nextInt();
         List<Integer> list = new ArrayList<>();
         for (int i=0;i<no;i++){
             list.add(scan.nextInt());
         }
-
 
         list.stream().forEach(val ->{
             for(int i=2; i<=val/i; i++){

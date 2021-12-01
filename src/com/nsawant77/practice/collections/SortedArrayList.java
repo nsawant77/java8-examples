@@ -1,8 +1,7 @@
 package com.nsawant77.practice.collections;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class SortedArrayList {
@@ -30,6 +29,13 @@ public class SortedArrayList {
                 .sorted(Comparator.comparing(Employee::getSalary).reversed())
                 .collect(Collectors.toList());
         System.out.println("Descending based on salary: "+salaryDsc);
+
+        System.out.println("Converted to HashMap");
+
+        Map<String,Integer> m1 = empList.stream()
+                        .collect(Collectors.toMap(Employee::getName, Employee::getSalary));
+
+        System.out.println(m1);
 
         /*List nameAsc  = empList.stream()
                 .sorted(Comparator.comparing(Employee::getName))

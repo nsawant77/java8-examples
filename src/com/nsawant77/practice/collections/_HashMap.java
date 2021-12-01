@@ -1,6 +1,11 @@
 package com.nsawant77.practice.collections;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+//import static java.util.stream.Collectors.toMap;
 
 public class _HashMap {
 
@@ -17,7 +22,20 @@ public class _HashMap {
         map.put("A",e3);
         map.put("C",e4);
         map.put("D",e5);
+
+        System.out.println("Before: ");
         System.out.println(map);
 
+        System.out.println("After: ");
+
+        Map<String, Employee> newMap = map.entrySet().stream()
+                //.sorted(Map.Entry.comparingByKey())
+                .limit(2)
+                .collect(Collectors.toMap(el1->el1.getKey(),el1->el1.getValue()));
+                /*.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,
+                        (el1, el2) -> el2, LinkedHashMap::new));*/
+                //.forEach(System.out::print);
+
+        System.out.println(newMap);
     }
 }
